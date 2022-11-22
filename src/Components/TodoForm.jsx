@@ -1,6 +1,8 @@
-import React, {useState} from "react";
+import React, {useContext, useState} from "react";
+import {TodosContext} from "../Context/TodosContext";
 
-export default function TodoForm(props) {
+export default function TodoForm() {
+    const { todos, setTodos, idForTodo, setIdForTodo } = useContext(TodosContext);
     const [inputItem, setInputItem] = useState('');
 
     /**
@@ -14,7 +16,14 @@ export default function TodoForm(props) {
             return ;
         }
 
-        props.createTodo(inputItem);
+        setTodos([...todos, {
+            id: idForTodo,
+            title: inputItem,
+            completed: false,
+            isEditing: false,
+        }]);
+
+        setIdForTodo(prevValue => prevValue + 1);
         setInputItem('');
     }
 
