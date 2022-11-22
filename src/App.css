@@ -13,7 +13,6 @@ body {
 
 .todo-app-container {
   min-height: 100vh;
-  padding-top: 100px;
   background: #f3f4f6;
 }
 
@@ -121,6 +120,10 @@ h2 {
   border: 1px solid lightgray;
 }
 
+.content {
+  padding-top: 100px;
+}
+
 .check-all-container {
   display: flex;
   justify-content: space-between;
@@ -182,6 +185,11 @@ nav ul {
 
 nav ul li:not(:first-child) {
   margin-left: 16px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
 }
 
 .active {
