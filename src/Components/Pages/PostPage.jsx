@@ -1,12 +1,18 @@
-import React from 'react';
+import React, {useContext, useEffect} from 'react';
 import {useParams} from "react-router-dom";
+import {PostContext} from "../../Context/PostContext";
 
-function PostPage() {
+function PostPage(props) {
+    const posts = useContext(PostContext);
     const params = useParams();
 
+    useEffect(() => {
+        console.log(posts);
+    }, [])
+
     return (
-        <div>
-            Here is a post {params.id}
+        <div className="list-of-posts">
+
         </div>
     );
 }
