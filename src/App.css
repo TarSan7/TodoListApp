@@ -215,6 +215,15 @@ nav ul li:not(:first-child) {
   align-items: center;
 }
 
+.post-content {
+  display: flex;
+  padding: 20px;
+}
+
+.full-width {
+  width:100%;
+}
+
 .spinner {
   margin-top: 200px;
   text-align: center;
@@ -230,6 +239,19 @@ nav ul li:not(:first-child) {
   font-size: 20px;
   text-decoration: none;
   margin-left: 3%;
+}
+
+.post-text {
+  color: #374151;
+  font-size: 20px;
+  text-decoration: none;
+  line-height: normal;
+  padding: 5%;
+}
+
+.image {
+  margin-right: 50px;
+  max-height: 300px;
 }
 
 .list-of-posts-text:hover {
